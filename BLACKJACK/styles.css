@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #2eb4cc;
+    color: white;
+}
+
+.container{
+    margin-top: 300px;
+}
+
+button {
+    background-color: #2e95cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
