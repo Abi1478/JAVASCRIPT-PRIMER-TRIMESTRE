@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>MENÚ</h1>
+    <ul class="menu">
+        <li><a href="Ejercicio1.html">Ejercicio 1</a></li>
+        <li><a href="Ejercicio2.html">Ejercicio 2</a></li>
+        <li><a href="Ejercicio3.html">Ejercicio 3</a></li>
+        <li><a href="Ejercicio4.html">Ejercicio 4</a></li>
+        <li><a href="Ejercicio5.html">Ejercicio 5</a></li>
+        <li><a href="Ejercicio6.html">Ejercicio 6</a></li>
+        <li><a href="Ejercicio7.html">Ejercicio 7</a></li>
+        <li><a href="Ejercicio8.html">Ejercicio 8</a></li>
+        <li><a href="Ejercicio9.html">Ejercicio 9</a></li>
+        <li><a href="Ejercicio10.html">Ejercicio 10</a></li>
+        <li><a href="Ejercicio11.html">Ejercicio 11</a></li>
+        <li><a href="Ejercicio12.html">Ejercicio 12</a></li>
+        <li><a href="Ejercicio13.html">Ejercicio 13</a></li>
+        <li><a href="Ejercicio14.html">Ejercicio 14</a></li>
+    </ul>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let enlaces = document.querySelectorAll("ul li a");
+
+            enlaces.forEach(enlace => {
+                enlace.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    let opcion;
+
+                    while(true) {
+                        opcion = Number(prompt("Presione 1 para continuar o 2 para volver al menú:"));
+                        switch (opcion) {
+                            case 1:
+                                window.location.href = event.target.href;
+                                return;
+                            case 2:
+                                return;
+                            default:
+                                alert("Opcion no válida. Intente de nuevo.");
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
